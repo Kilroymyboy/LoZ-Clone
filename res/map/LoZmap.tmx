@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="150" height="150" tilewidth="8" tileheight="8">
+ <tileset firstgid="1" name="FIXED - Legend of Zelda A Link to the Past - Overworld Tiles" tilewidth="8" tileheight="8">
+  <image source="/Tilesets/FIXED - Legend of Zelda A Link to the Past - Overworld Tiles.png" width="200" height="200"/>
+ </tileset>
+ <layer name="background" width="150" height="150" opacity="0.9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3ZSxbCIAwFUIZ1GXX/i1Tnfo4WaXjcwZ1qSUlC6NZa2wAA3tjvrgWeA4Bceg1AFnUdgE+O9IoRfUYvA2Z0GfAfKfUxZR3kskcB4Dz6MLA6dRDq8n3Emldx9K57xF35KuQHAADPOCfOL3Fu6rUvj/xOYlwhiRwFIMGoeUzfBIA+9FSgil9nCXUMePB9GOhFPWEFKfs8ZR3/YlZidXIAvlett8rjud4Xn9nT4gkAABU4S8O89uZOqFccxRD5lM/7FXcA4DX3QwCcqfrsqE9CNjkOUFv1syIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVHMDEMqSGJBfAQA=
+  </data>
+ </layer>
+ <layer name="collision" width="150" height="150">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3aW07DMBRF0TL/sTEnPitBaexg4/tYS8p/snOitGofDwAAAAAAAAAAAKCjzw/H7MG10/co48E1neboNeZ7J8/me5qMsaunkWvu1uQuu3qyq3Wi7Sr6niOfWySROq3Y9O7nIlKvyCJ1sqs6InWyqzqqdbKrGDp3urPBzr1mdO5kV/t07nTn97/OvWZ07mRX++z6bFu1f9XrWu2vnV4963bFjl1V1uEaV9Bpjl5jdJqj1xid5ug1pmKnnZ/5KvbaoWInuzqvYie7Oq9iJ7s6T6c5eo3RaY5eY3Sao9eYbJ1++w/Cfx5cy9bp9Kay9TolYqd39zHi+fJTxPtkV/m9+s/U3ffCqveJXeVnV+yQ7T5lO9+ust2nbOfb1env7L7n13R6I3YFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwC5fl6ZYDJBfAQA=
+  </data>
+ </layer>
+ <layer name="objects" width="150" height="150">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3cR24UQRiG4fEGWBFs4gokMjZxTUbChDUZibgDHJDgBCSBBCcgI8AcgIwAcwmwiUcAm7jiW4yFaYOnqru6u7rqfaRPbVmentI/9VeHGU+tBgDwweKyBwCgUjaWPYAC7Ct7AEityNducoHPhZHoU3Oc6xWPmgP5c3Ec5lhij/MfFIkeDVeV1xKXY69yHQBk4+oY5+ra08X9Xo7b2cVw3x3Vx/lLWLiHCZ9MUfaztdqisXZlnLKErdG2PV2Zo0P/2claL1+vk2yugU3OoZP916l0Kd3KcYvnigXrlZlk/51TztdzofjhlGqtsq7B37C+m0n233XlhnJTuVX8cEq1S9nd4G9iWq+yHLOT/fdYeaI8VZ5l2G8aR5SjyjGlo+DnNsV6Zcan/julnFbOKGdT7mOqMk2ZrsxwNK7hfKqXz3zqv8vKFeWqci3lPpYqy5Tlygo3w/rLaPXifcU/fOq/+8oD5aHyKOU+NimblS3KVkfjGs5FvWJ4r8un9cqFA8pB5ZByOIf9u6hXDPPKp/WqaO+VD8pH5ZPhY2Kul43Q1isb35Ufyk/ll+FjQqpXnp9ViLn/JjbVapOUZqVFGa9MaBr9MTHXy+b4HVL/2VqoObRIaVXalPnKggbzKuZ62cij/04oJ3PYrw9iXq9Gk7zHkrX/+pR+5a3yrv67i8qljPv1FeuVmaz9N6AMKl+Vb9mH4z3WKzP0nx3qZYb+s0O9zNB/dmKvl+lnZ0Lsv9lNtdocZa4yr8F9A1t51iuk961D7L+VmkurlNXKmvq8Wq9scLDvEOuVhxDXq22aS9uVHcrO+rzao+x1sO8Q65WHEPuvQ3OpU+lSuh0fB0Os179kPSbTf3aG18vX/9lyKe1707H0nyu29QrpXNwG65Ud6mWmautVKN/PEPr3tFSt/3z4Pgk05uN6dVvXcHeUu0pP4nrOx/HG7H/njz6uV881l14oL5XexLzycbwYaaj/xyhj6z83Ky0W21rGxyW91lx6o/Qp/axXucvjfslQ/89UZtV/blXaLLa1jI9L+qy59EUZUAYrul7F8L9co6la/1dtvFWXtj+q0v9DqjbeWPlwP8h2i3LY3HMr+/s6uX8UlhjeMzUV+r1v5KOIa7Me5V4Bz4O49Cqvyh6EpVg/awGEhl52L/Z7xVkxJ4Hqyvs6nnsmSItjS/l4DfxQpfutVRprEagH0irz+pRzt/KwZmA4ehFFcHW+z3VDGHgdzVAnAICPuH4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAid9aLNBHkF8BAA==
+  </data>
+ </layer>
+</map>
