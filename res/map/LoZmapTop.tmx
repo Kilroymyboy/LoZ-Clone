@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="150" height="150" tilewidth="8" tileheight="8">
+ <tileset firstgid="1" name="FIXED - Legend of Zelda A Link to the Past - Overworld Tiles" tilewidth="8" tileheight="8">
+  <image source="./Tilesets/FIXED - Legend of Zelda A Link to the Past - Overworld Tiles.png" width="200" height="200"/>
+ </tileset>
+ <tileset firstgid="626" name="TopLayer" tilewidth="8" tileheight="8">
+  <image source="./Tilesets/FIXED - Legend of Zelda A Link to the Past - Overworld Tiles.png" trans="489848" width="200" height="200"/>
+ </tileset>
+ <layer name="background" width="150" height="150" opacity="0.9">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3ZSxbCIAwFUIZ1GXX/i1Tnfo4WaXjcwZ1qSUlC6NZa2wAA3tjvrgWeA4Bceg1AFnUdgE+O9IoRfUYvA2Z0GfAfKfUxZR3kskcB4Dz6MLA6dRDq8n3Emldx9K57xF35KuQHAADPOCfOL3Fu6rUvj/xOYlwhiRwFIMGoeUzfBIA+9FSgil9nCXUMePB9GOhFPWEFKfs8ZR3/YlZidXIAvlett8rjud4Xn9nT4gkAABU4S8O89uZOqFccxRD5lM/7FXcA4DX3QwCcqfrsqE9CNjkOUFv1syIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVHMDEMqSGJBfAQA=
+  </data>
+ </layer>
+ <layer name="collision" width="150" height="150">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3aQW7DMAwAwfT/b+ufegzQpjGpWpVEzgC6yysajo08HgAAAAAAAAAAAEBHnx9WdnFt9RmduLimU45eMd87uTff0yTGXD1Frrlbk1Hm6slc3cdc5WgSs1OnO2Z69n2xU6+dzeo08o5ururYqZO5qqNaJ3O1h86dRmawc6+Mzp3M1TydO42+W3CtcydzNY9OOXrF/LXTq3u98rf6qtd1txlzVVmHa7yDTjl6xeiUo1eMTjl6xVTsNPM3X8VeM1TsZK7Wq9jJXK1XsZO5Wk+nHL1idMrRK0anHL1idMrRK+a0Tr/9t+U/F9d27PTuHHfcLz/teE7m6nyv/jM1+ly463lirs5nrpjhtHM6bb9dnXZOp+23q9PO6bT9drX6W5DvRwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADM8gUqk0FbkF8BAA==
+  </data>
+ </layer>
+ <layer name="objects" width="150" height="150">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3cx27UQBzH8Q0H4ERJqCeQ6IR+piMRypmORL0hpfAMEBBI8AR0BIQHoAUEhJeAhPoIkFBP/A4bsXJCdsYe2+OZ70f6yRFivaN/5j+2Z5PUagAAH6wuewAAKmVn2QMowLGyB4DUivzezSrwvTAWfWqOe73iUXMgfy6uw1xL7HH/gyLRo+Gq8lricuxVrgOAbFxd41w9e7rY7+W6nV0M++6oPu5fwsIeJnwyWznO0eqI5jqUqcoajkbHjnRljg79ZydrvXx9TrJ5Bja5h072X5fSrfQoZy3eKxasV2aS/XdRuVTP5eKHU6qtyrYm/4f13Uyy/24pt5U7yt3ih1OqQ8rhJv8npvUqyzU72X/PlH7lufIiw3nTONPwdWfB722K9cqMT/13Tjmv9CoXUp5jjjJXmafMdzSuRj7Vy2d59V9/i9a8lrHHiVxTris3lJsp33etsk5Zr2xIeY6JTFQvPlf8x6f+e6Q8Vp4oT1OeY5eyW9mj7HU0rkYu6hXDZ12h3S+cUE4qp5TTOZzfRb1imFc+rVdF+6h8Uj4rXwxfE3O9bIS2Xtn4qfxSfit/DF8TUr3y/FmFmPtvhp4jZiqtSpsyTZne5Nki5nrZXL9D6j9bKzSHVirtyiplmbK8ybyKuV42Yu6/NKjX+JJ7LFn7b1AZUt4rH+r/dkW5mvG8vmK9MpO1/4aVEeW78iP7cLzHemWG/rNDvczQf3aolxn6z07s9TL92ZkQ+29RS622WFmiLG2yb2Arz3qF9Ll1iP23UXNpk7JZ2VKfV9uVHQ7OHWK98hDierVPc2m/ckA5WJ9XR5SjDs4dYr3yEGL/dWoudSndSo/j62CI9RpP1msy/WensV6+/s6WS2k/m46l/1yxrVdI9+I2WK/sUC8zrFd2eie5OU/of6elav3nw9+TQHM+rlf39Ax3X3mg9CWe53wcb8z+d//o43r1UnPplfJaGUjMKx/Hi7FG+3+yMqX+davSZnGsZXxd0lvNpXfKoDLEepW7PPZLRvt/gbKw/nW7ssriWMv4uqSvmkvflGFlpKLrVQy/yzWRqvV/1cZbdWn7oyr9P6pq441V1frf1f4R7NnsuZX99zrZPwpLDJ+Zmgp97xv5KOLZrE95WMD7IC4DypuyB2Ep1p+1AEJDL7sX+15xVsxJoLryfo5nzwRpcW0pH98DP1Rpv7VKYy0C9UBaZT6fcu9WHtYMNKIXUQRX9/s8N4SB76MZ6gQA8BHPDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADDxFzdPC+uQXwEA
+  </data>
+ </layer>
+ <layer name="toplayer" width="150" height="150">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3YsQ2DUBBEwdVBB6Zm+qMACO0eTEIBBAQIPkgzyUs33gQAAAAAAAAAAAAAAAAAzvl3ydrte2SuZKnr9/FOnz4Z+n0BAAAAoLVvJT/fJgAAAAAAAAAPNFYyVbsCAAAAcK/Wf5D/CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4kw3jE0KckF8BAA==
+  </data>
+ </layer>
+</map>

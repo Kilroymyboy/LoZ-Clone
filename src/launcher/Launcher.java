@@ -19,7 +19,7 @@ public class Launcher extends StateBasedGame{
    public void initStatesList(GameContainer gc) throws SlickException{
       this.getState(menu).init(gc, this);
       this.getState(play).init(gc, this);
-      this.enterState(play);
+      this.enterState(menu);
       gc.setTargetFrameRate(60);
       gc.setSmoothDeltas(true);
   	gc.setAlwaysRender(true);
