@@ -6,7 +6,7 @@ import org.newdawn.slick.state.*;
 
 public class Launcher extends StateBasedGame{
    
-   public static final String gamename = "LoZ Clone";
+   public static final String gamename = Constants.GAMENAME.getText();
    public static final int menu = 0;
    public static final int play = 1;
    
@@ -29,7 +29,7 @@ public class Launcher extends StateBasedGame{
       AppGameContainer appgc;
       try{
          appgc = new AppGameContainer(new Launcher(gamename));
-         appgc.setDisplayMode(800, 600, false);
+         appgc.setDisplayMode(Constants.DISPLAYWIDTH.getValue(), Constants.DISPLAYHEIGHT.getValue(), false);
          appgc.start();
       }catch(SlickException e){
          e.printStackTrace();

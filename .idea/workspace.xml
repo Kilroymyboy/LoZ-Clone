@@ -13,6 +13,7 @@
       <list>
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -54,7 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VectorTest.inits">
+  <component name="RunManager" selected="Application.Launcher">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="launcher.Launcher" />
       <module name="SlickLoZ" />
@@ -108,9 +109,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Launcher" />
         <item itemvalue="JUnit.VectorTest.inits" />
         <item itemvalue="JUnit.VectorTest.set" />
-        <item itemvalue="Application.Launcher" />
       </list>
     </recent_temporary>
   </component>

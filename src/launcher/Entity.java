@@ -18,18 +18,18 @@ public class Entity
 
     Entity(String entity) throws SlickException
     {
-        wDown = setAnimation("res/sprite/" + entity +" Dwalk.png", 16, 24, 100, true);
-        wUp = setAnimation("res/sprite/" + entity +" Uwalk.png", 16, 24, 100, true);
-        wRight = setAnimation("res/sprite/" + entity +" Rwalk.png", 16, 24, 100, true);
-        wLeft = setAnimation("res/sprite/" + entity +" Lwalk.png", 16, 24, 100, true);
+        wDown = setAnimation(Constants.SPRITEPATH.getText() +entity +" Dwalk.png", 16, 24, 100, true);
+        wUp = setAnimation(Constants.SPRITEPATH.getText() + entity +" Uwalk.png", 16, 24, 100, true);
+        wRight = setAnimation(Constants.SPRITEPATH.getText() + entity +" Rwalk.png", 16, 24, 100, true);
+        wLeft = setAnimation(Constants.SPRITEPATH.getText() + entity +" Lwalk.png", 16, 24, 100, true);
 
-        lDown = setAnimation("res/sprite/" + entity +" Dlook.png", 16, 24, 10000, false);
+        lDown = setAnimation(Constants.SPRITEPATH.getText() + entity +" Dlook.png", 16, 24, 10000, false);
         lDown.setLooping(false);
-        lRight = setAnimation("res/sprite/" + entity +" Rlook.png", 16, 24, 10000, false);
+        lRight = setAnimation(Constants.SPRITEPATH.getText() + entity +" Rlook.png", 16, 24, 10000, false);
         lRight.setLooping(false);
-        lUp = setAnimation("res/sprite/" + entity +" Ulook.png", 16, 24, 10000, false);
+        lUp = setAnimation(Constants.SPRITEPATH.getText() + entity +" Ulook.png", 16, 24, 10000, false);
         lUp.setLooping(false);
-        lLeft = setAnimation("res/sprite/" + entity +" Llook.png", 16, 24, 10000, false);
+        lLeft = setAnimation(Constants.SPRITEPATH.getText() +entity +" Llook.png", 16, 24, 10000, false);
         lLeft.setLooping(false);
 
         pos = new Vector(0);
