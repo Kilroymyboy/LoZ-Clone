@@ -71,14 +71,6 @@ public class Play extends BasicGameState{
 		map.render((int)mapOffsetX, (int)mapOffsetY, objectsLayer);
 		player.render();
 		map.render((int)mapOffsetX, (int)mapOffsetY, topLayer);
-
-//		g.drawString("Players X: "+HitBoxUpDownX+"\nPlayers Y: "+HitBoxUpDownY, 100, 20); //indicator to see where the player is in his world
-
-		//		for(Rectangle collison : collisions)
-		//		{
-		//			g.drawRect((int)collison.getX() + (int)mapX, (int)collison.getY() + (int)mapY, (int)collison.getWidth(), (int)collison.getHeight());
-		//		}
-
 	}
 
 	@Override
