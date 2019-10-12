@@ -15,18 +15,8 @@ import org.newdawn.slick.tiled.TiledMap;
 public class Play extends BasicGameState {
 
     private int ID;
-    private TiledMap map;
-    private ArrayList<Rectangle> collisions;
-
-    private int cLayer;
-    private int topLayer;
-    private int objectsLayer;
-    private int backgroundLayer;
+    private GameMap map;
     private Player player;
-
-    private float mapOffsetX;
-    private float mapOffsetY;
-
 
     public Play(int ID) {
         this.ID = ID;
@@ -34,36 +24,16 @@ public class Play extends BasicGameState {
 
     @Override
     public void init(GameContainer gc, StateBasedGame stb) throws SlickException {
-        map = new TiledMap(Constants.MAPLOCATION.getText());
+        map = new GameMap();
         player = new Player();
-
-        cLayer = map.getLayerIndex(Constants.MAPCOLLISION.getText());
-        topLayer = map.getLayerIndex(Constants.MAPTOPLAYER.getText());
-        objectsLayer = map.getLayerIndex(Constants.MAPOBJECTS.getText());
-        backgroundLayer = map.getLayerIndex(Constants.MAPBACKGROUND.getText());
-
-        collisions = new ArrayList<Rectangle>();
-        mapOffsetX = -200;
-        mapOffsetY = -200;
-
-
-        for (int y = 0; y < map.getHeight(); y++) {
-            for (int x = 0; x < map.getWidth(); x++) {
-                if (map.getTileId(x, y, cLayer) == 461) {
-                    collisions.add(new Rectangle((x * 8), (y * 8), 8, 8));
-                }
-            }
-        }
     }
 
     @Override
     public void render(GameContainer gc, StateBasedGame stb, Graphics g) throws SlickException {
         g.scale(Constants.GAMESCALE.getValue(), Constants.GAMESCALE.getValue());
-        map.render((int) mapOffsetX, (int) mapOffsetY, backgroundLayer);
-        map.render((int) mapOffsetX, (int) mapOffsetY, cLayer);
-        map.render((int) mapOffsetX, (int) mapOffsetY, objectsLayer);
+        map.renderBase();
         player.render();
-        map.render((int) mapOffsetX, (int) mapOffsetY, topLayer);
+        map.renderAbove();
     }
 
     @Override
@@ -71,46 +41,46 @@ public class Play extends BasicGameState {
 
         Input input = gc.getInput();
 
-        player.update(delta, mapOffsetX, mapOffsetY);
+        player.update(delta, map.getX(), map.getY());
 
         if (player.canMove()) {
 
             if (input.isKeyDown(Input.KEY_W)) {
                 player.moveUp();
-                mapOffsetY += delta * .1f; //increase the Y coordinates of bucky (move him up)
+                map.move(0,delta * .1f); //increase the Y coordinates of bucky (move him up)
 
-                if (map.getTileId(player.getUpDownHitbox().x, player.getUpDownHitbox().y - 2, cLayer) != 0 ||
-                        map.getTileId(player.getUpDownHitbox().x + 1, player.getUpDownHitbox().y - 2, cLayer) != 0) {
-                    mapOffsetY -= delta * .1f; //collition detection
+                if (map.getTileId(player.getUpDownHitbox().x, player.getUpDownHitbox().y - 2, map.collisionIndex()) != 0 ||
+                        map.getTileId(player.getUpDownHitbox().x + 1, player.getUpDownHitbox().y - 2, map.collisionIndex()) != 0) {
+                    map.move(0, -delta * .1f); //collition detection
                 }
 
             }
 
             if (input.isKeyDown(Input.KEY_S)) {
                 player.moveDown();
-                mapOffsetY -= delta * .1f;
+                map.move(0, -delta * .1f);
 
-                if (map.getTileId(player.getUpDownHitbox().x, player.getUpDownHitbox().y, cLayer) != 0 ||
-                        map.getTileId(player.getUpDownHitbox().x + 1, player.getUpDownHitbox().y, cLayer) != 0) {
-                    mapOffsetY += delta * .1f; //collition detection
+                if (map.getTileId(player.getUpDownHitbox().x, player.getUpDownHitbox().y, map.collisionIndex()) != 0 ||
+                        map.getTileId(player.getUpDownHitbox().x + 1, player.getUpDownHitbox().y, map.collisionIndex()) != 0) {
+                    map.move(0, delta * .1f); //collition detection
                 }
             }
 
             if (input.isKeyDown(Input.KEY_A)) {
                 player.moveLeft();
-                mapOffsetX += delta * .1f;
+                map.move(delta * .1f,0);
 
-                if (map.getTileId(player.getLeftHitbox().x, player.getLeftHitbox().y, cLayer) != 0) {
-                    mapOffsetX -= delta * .1f; //collition detection
+                if (map.getTileId(player.getLeftHitbox().x, player.getLeftHitbox().y, map.collisionIndex()) != 0) {
+                    map.move(-delta * .1f,0);
                 }
             }
 
             if (input.isKeyDown(Input.KEY_D)) {
                 player.moveRight();
-                mapOffsetX -= delta * .1f;
+                map.move(-delta * .1f,0);
 
-                if (map.getTileId(player.getRightHitbox().x + 2, player.getRightHitbox().y, cLayer) != 0) {
-                    mapOffsetX += delta * .1f; //collition detection
+                if (map.getTileId(player.getRightHitbox().x + 2, player.getRightHitbox().y, map.collisionIndex()) != 0) {
+                    map.move(delta * .1f,0); //collition detection
                 }
             }
         }
