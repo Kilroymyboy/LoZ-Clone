@@ -3,19 +3,19 @@ package launcher;
 public class Vector
 {
     public int x, y;
-    Vector()
+    public Vector()
     {
         x = 0;
         y = 0;
     }
 
-    Vector(int x2, int y2)
+    public Vector(int x2, int y2)
     {
         x = x2;
         y = y2;
     }
 
-    Vector(int v)
+    public Vector(int v)
     {
         x = v;
         y = v;

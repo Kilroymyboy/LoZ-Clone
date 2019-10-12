@@ -17,54 +17,6 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="module-library">
-      <library name="jinput.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/Slick2D/jinput.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <NATIVE>
-          <root url="file://SlickLoZ/Slick2D" />
-        </NATIVE>
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="lwjgl_util.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/Slick2D/lwjgl_util.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <NATIVE>
-          <root url="file://SlickLoZ/Slick2D" />
-        </NATIVE>
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="lwjgl.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/Slick2D/lwjgl.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <NATIVE>
-          <root url="file://SlickLoZ/Slick2D" />
-        </NATIVE>
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="slick.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/Slick2D/slick.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <NATIVE>
-          <root url="file://SlickLoZ/Slick2D" />
-        </NATIVE>
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
@@ -96,6 +48,38 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/slick.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="" scope="TEST">
+      <library name="JUnit5.4">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/junit-jupiter-5.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/junit-jupiter-api-5.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/apiguardian-api-1.0.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/opentest4j-1.1.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/junit-platform-commons-1.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/junit-jupiter-params-5.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/junit-jupiter-engine-5.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/junit-platform-engine-1.4.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/junit-jupiter-5.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/junit-jupiter-api-5.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/apiguardian-api-1.0.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/opentest4j-1.1.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/junit-platform-commons-1.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/junit-jupiter-params-5.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/junit-jupiter-engine-5.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/junit-platform-engine-1.4.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
