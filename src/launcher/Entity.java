@@ -7,13 +7,10 @@ import org.newdawn.slick.SpriteSheet;
 public class Entity
 {
     protected Animation curAnim;
-    protected int xPos, yPos;
-    protected int HitBoxUpDownX;
-    protected int HitBoxUpDownY;
-    protected int HitBoxLeftX;
-    protected int HitBoxLeftY;
-    protected int HitBoxRightX;
-    protected int HitBoxRightY;
+    protected Vector pos;
+    protected Vector HitBoxUpDown;
+    protected Vector HitBoxLeft;
+    protected Vector HitBoxRight;
 
     protected Animation wUp, wDown, wLeft, wRight;
     protected Animation lUp, lDown, lLeft, lRight;
@@ -34,49 +31,48 @@ public class Entity
         lUp.setLooping(false);
         lLeft = setAnimation("res/sprite/" + entity +" Llook.png", 16, 24, 10000, false);
         lLeft.setLooping(false);
+
+        pos = new Vector(0);
+        HitBoxUpDown = new Vector(0);
+        HitBoxRight = new Vector(0);
+        HitBoxLeft = new Vector(0);
     }
 
     public void render()
     {
-        curAnim.draw(xPos, yPos);
+        curAnim.draw(pos.x, pos.y);
     }
 
     public void update(int delta, float mapOffsetX, float mapOffsetY)
     {
         curAnim.update(delta);
 
-        HitBoxUpDownX= (int) ((xPos+3 - mapOffsetX)/8);
-        HitBoxUpDownY = (int) ((yPos+25 - mapOffsetY)/8);
-        HitBoxRightX = (int) ((xPos+1 - mapOffsetX)/8);
-        HitBoxRightY = (int) ((yPos+20 - mapOffsetY)/8);
-        HitBoxLeftX = (int) ((xPos-1 - mapOffsetX)/8);
-        HitBoxLeftY = (int) ((yPos+20 - mapOffsetY)/8);
+        HitBoxUpDown.set(
+                (int) ((pos.x + 3 - mapOffsetX)/8),     //x
+                (int) ((pos.y + 25 - mapOffsetY)/8));   //y
+        HitBoxRight.set(
+                (int) ((pos.x + 1 - mapOffsetX)/8),     //x
+                (int) ((pos.y + 20 - mapOffsetY)/8));   //y
+        HitBoxLeft.set(
+                (int) ((pos.x - 1 - mapOffsetX)/8),     //x
+                (int) ((pos.y + 20 - mapOffsetY)/8));   //y
     }
 
-    public int getXHitbox()
+    public Vector getUpDownHitbox()
     {
-        return HitBoxUpDownX;
+        return HitBoxUpDown;
     }
-    public int getYHitbox()
+
+    public Vector getLeftHitbox()
     {
-        return HitBoxUpDownY;
+        return HitBoxLeft;
     }
-    public int getLXHitbox()
+
+    public Vector getRightHitbox()
     {
-        return HitBoxLeftX;
+        return HitBoxRight;
     }
-    public int getLYHitbox()
-    {
-        return HitBoxLeftY;
-    }
-    public int getRXHitbox()
-    {
-        return HitBoxRightX;
-    }
-    public int getRYHitbox()
-    {
-        return HitBoxRightY;
-    }
+
 
     private Animation setAnimation (String location, int width, int height, int duration, boolean pingPong) throws SlickException
     {

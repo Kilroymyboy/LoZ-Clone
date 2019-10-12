@@ -18,8 +18,8 @@ public class Player extends Entity
 
         canMove = true;
         curAnim = lDown;
-        xPos = 200;
-        yPos = 150;
+        pos.x = 200;
+        pos.y = 150;
     }
 
 

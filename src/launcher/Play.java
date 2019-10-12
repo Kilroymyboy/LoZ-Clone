@@ -89,8 +89,8 @@ public class Play extends BasicGameState{
 				player.moveUp();
 				mapOffsetY += delta * .1f; //increase the Y coordinates of bucky (move him up)
 
-				if(map.getTileId(player.getXHitbox(), player.getYHitbox()-2, cLayer) != 0 ||
-						map.getTileId(player.getXHitbox()+1, player.getYHitbox()-2, cLayer) != 0)
+				if(map.getTileId(player.getUpDownHitbox().x, player.getUpDownHitbox().y-2, cLayer) != 0 ||
+						map.getTileId(player.getUpDownHitbox().x+1, player.getUpDownHitbox().y-2, cLayer) != 0)
 				{
 					mapOffsetY -= delta * .1f; //collition detection
 				}
@@ -101,8 +101,8 @@ public class Play extends BasicGameState{
 				player.moveDown();
 				mapOffsetY -= delta * .1f;
 
-				if(map.getTileId(player.getXHitbox(), player.getYHitbox(), cLayer) != 0 ||
-						map.getTileId(player.getXHitbox()+1, player.getYHitbox(), cLayer) != 0)
+				if(map.getTileId(player.getUpDownHitbox().x, player.getUpDownHitbox().y, cLayer) != 0 ||
+						map.getTileId(player.getUpDownHitbox().x+1, player.getUpDownHitbox().y, cLayer) != 0)
 				{
 					mapOffsetY += delta * .1f; //collition detection
 				}
@@ -113,7 +113,7 @@ public class Play extends BasicGameState{
 				player.moveLeft();
 				mapOffsetX += delta * .1f;
 
-				if(map.getTileId(player.getLXHitbox(), player.getLYHitbox(), cLayer) != 0)
+				if(map.getTileId(player.getLeftHitbox().x, player.getLeftHitbox().y, cLayer) != 0)
 				{
 					mapOffsetX -= delta * .1f; //collition detection
 				}
@@ -124,7 +124,7 @@ public class Play extends BasicGameState{
 				player.moveRight();
 				mapOffsetX -= delta * .1f;
 
-				if(map.getTileId(player.getRXHitbox()+2, player.getRYHitbox(), cLayer) != 0)
+				if(map.getTileId(player.getRightHitbox().x+2, player.getRightHitbox().y, cLayer) != 0)
 				{
 					mapOffsetX += delta * .1f; //collition detection
 				}
