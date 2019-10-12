@@ -13,7 +13,7 @@ public class Launcher extends StateBasedGame{
    public Launcher(String gamename){
       super(gamename);
       this.addState(new Menu(menu));
-      this.addState(new Play(play));
+      this.addState(new GameLoop(play));
    }
    
    public void initStatesList(GameContainer gc) throws SlickException{

@@ -12,13 +12,13 @@ import org.newdawn.slick.state.*;
 import org.newdawn.slick.tiled.Layer;
 import org.newdawn.slick.tiled.TiledMap;
 
-public class Play extends BasicGameState {
+public class GameLoop extends BasicGameState {
 
     private int ID;
     private GameMap map;
     private Player player;
 
-    public Play(int ID) {
+    public GameLoop(int ID) {
         this.ID = ID;
     }
 
